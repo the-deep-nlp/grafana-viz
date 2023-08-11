@@ -1,0 +1,9 @@
+{
+    email dev@thedeep.io
+}
+
+monitoring.labs.thedeep.io {
+    reverse_proxy server:3000 {
+        header_up X-Forwarded-Proto https
+    }
+}
